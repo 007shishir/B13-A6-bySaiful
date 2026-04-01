@@ -1,0 +1,158 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Starter Plan",
+    "description": "Perfect for individuals looking to build their first professional resume.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Free Forever",
+    "tagType": "new",
+    "features": [
+      "5 basic templates",
+      "PDF export",
+      "Public sharing link"
+    ],
+    "icon": "leaf-outline"
+  },
+  {
+    "id": "prod_002",
+    "name": "Pro Monthly",
+    "description": "Full access to all premium features with flexible monthly billing.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "100+ premium templates",
+      "ATS optimization engine",
+      "Unlimited PDF downloads",
+      "AI cover letter builder"
+    ],
+    "icon": "rocket-launch"
+  },
+  {
+    "id": "prod_003",
+    "name": "Pro Yearly",
+    "description": "The best value for long-term career management and updates.",
+    "price": 120,
+    "period": "yearly",
+    "tag": "Best Value",
+    "tagType": "best seller",
+    "features": [
+      "All Pro features included",
+      "Priority customer support",
+      "Personal branding website",
+      "2 months free equivalent"
+    ],
+    "icon": "star-shooting"
+  },
+  {
+    "id": "prod_004",
+    "name": "Executive Suite",
+    "description": "High-end tools designed for C-suite professionals and senior leadership.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "Premium",
+    "tagType": "popular",
+    "features": [
+      "Executive-style templates",
+      "LinkedIn profile audit",
+      "Dedicated career coach chat",
+      "Multi-language support"
+    ],
+    "icon": "briefcase-check"
+  },
+  {
+    "id": "prod_005",
+    "name": "Student Kickstart",
+    "description": "Affordable access for current students and recent graduates.",
+    "price": 25,
+    "period": "one-time",
+    "tag": "Student Deal",
+    "tagType": "new",
+    "features": [
+      "Internship-focused templates",
+      "Academic CV formats",
+      "6 months of access"
+    ],
+    "icon": "school-cap"
+  },
+  {
+    "id": "prod_006",
+    "name": "Enterprise Hub",
+    "description": "Scalable resume solutions for universities and outplacement firms.",
+    "price": 999,
+    "period": "yearly",
+    "tag": "Bulk Savings",
+    "tagType": "best seller",
+    "features": [
+      "White-label dashboard",
+      "API access",
+      "Bulk user management",
+      "SLA guarantee"
+    ],
+    "icon": "office-building"
+  },
+  {
+    "id": "prod_007",
+    "name": "AI Resume Refresh",
+    "description": "A quick, one-time AI-powered polish of your existing document.",
+    "price": 9,
+    "period": "one-time",
+    "tag": "Trending",
+    "tagType": "new",
+    "features": [
+      "Instant grammar fix",
+      "Keyword optimization",
+      "Single PDF export"
+    ],
+    "icon": "sparkles"
+  },
+  {
+    "id": "prod_008",
+    "name": "Designer Choice",
+    "description": "Highly visual templates for creative industries like UI/UX and Marketing.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "Creative",
+    "tagType": "popular",
+    "features": [
+      "Portfolio integration",
+      "Custom color palettes",
+      "High-res PNG exports",
+      "Vector icons included"
+    ],
+    "icon": "palette"
+  },
+  {
+    "id": "prod_009",
+    "name": "Lifetime Legacy",
+    "description": "Pay once and never worry about resume updates ever again.",
+    "price": 250,
+    "period": "one-time",
+    "tag": "Limited Edition",
+    "tagType": "best seller",
+    "features": [
+      "Lifetime feature updates",
+      "Unlimited storage",
+      "No recurring fees",
+      "Exclusive legacy templates"
+    ],
+    "icon": "infinity"
+  },
+  {
+    "id": "prod_010",
+    "name": "Interview Prep Add-on",
+    "description": "Monthly subscription to our AI interview simulator and feedback tool.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "New Tool",
+    "tagType": "new",
+    "features": [
+      "Video mock interviews",
+      "Real-time speech analysis",
+      "Common question database"
+    ],
+    "icon": "mic-voice"
+  }
+]

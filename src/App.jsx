@@ -1,6 +1,8 @@
 import './App.css'
 import Hero from './Componants/header/Hero'
 import Navbar from './Componants/header/Navbar'
+import ToolsHeader from './Componants/Main/ToolsHeader'
+import UserN from './Componants/Main/UserN'
 
 function App() {
 
@@ -8,6 +10,8 @@ function App() {
     <>
       <Navbar>  </Navbar>
       <Hero/>
+      <UserN/>
+      <ToolsHeader/>
     </>
   )
 }
