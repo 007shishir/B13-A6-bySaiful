@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* root-level utility fallback for any component that uses max-w-7xl */
+.max-w-7xl {
+  max-width: 80rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1280px) {
+  .max-w-7xl {
+    max-width: 80rem;
+  }
+}
