@@ -21,7 +21,6 @@ function App() {
     <>
       <Navbar>  </Navbar>
       <Hero/>
-      <GetStarted/>
       <UserN/>
       <ToolsHeader/>
       <Suspense fallback={<div>Loading...</div>}>

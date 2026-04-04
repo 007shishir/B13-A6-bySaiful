@@ -1,27 +1,14 @@
-import React from 'react';
+import React, { Suspense } from "react";
+import StepsCard from "./StepsCard";
 
-const steps = [
-  {
-    id: '01',
-    title: 'Create Account',
-    description: 'Sign up for free in seconds. No credit card required to get started.',
-    icon: '👤',
-  },
-  {
-    id: '02',
-    title: 'Choose Products',
-    description: 'Browse our catalog and select the tools that fit your needs.',
-    icon: '📦',
-  },
-  {
-    id: '03',
-    title: 'Start Creating',
-    description: 'Download and start using your premium tools immediately.',
-    icon: '🚀',
-  },
-];
+const onBoardingSteps = async () => {
+  const res = await fetch("/onboardingSteps.json");
+  return await res.json();
+};
 
 const GetStarted = () => {
+  const stepsPromise = onBoardingSteps();
+
   return (
     <section className="bg-slate-50 py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -37,6 +24,10 @@ const GetStarted = () => {
           </p>
         </div>
       </div>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <StepsCard stepsPromise={stepsPromise} />
+      </Suspense>
     </section>
   );
 };
