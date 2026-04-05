@@ -6,6 +6,7 @@ import ToolsHeader from './Componants/Main/ToolsHeader'
 import GetStarted from './Componants/Main/GetStarted'
 import UserN from './Componants/Main/UserN'
 import ToolsData from './Componants/PlayerUI/ToolsData'
+import PackagePrice from './Componants/Main/PackagePrice'
 
 
   const   fetchToolsData = async () => {
@@ -28,6 +29,7 @@ function App() {
       </Suspense>
 
       <GetStarted/>
+      <PackagePrice/>
     </>
   )
 }
