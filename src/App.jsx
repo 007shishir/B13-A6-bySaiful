@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react'
 import './App.css'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 import Hero from './Componants/header/Hero'
 import Navbar from './Componants/header/Navbar'
 import ToolsHeader from './Componants/Main/ToolsHeader'
@@ -43,6 +45,7 @@ function App() {
       <PackagePrice/>
       <ReadytoJoin/>
       <Footer/>
+      <ToastContainer />
     </>
   )
 }

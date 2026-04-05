@@ -1,9 +1,17 @@
-import React from 'react';
+import React from "react";
+import { toast } from "react-toastify";
 
 const ToolsCart = ({ selectedProducts, setSelectedProducts, tool }) => {
-    return (
-        <div>
-                    <div className="relative rounded-lg bg-slate-50 p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+  const notify = () => toast(`${tool.name} added to cart!`);
+
+  const handleClick = () => {
+    setSelectedProducts([...selectedProducts, tool]);
+    notify();
+  };
+
+  return (
+    <div>
+      <div className="relative rounded-lg bg-slate-50 p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
         <span className="absolute right-4 top-4 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold uppercase px-3 py-1 shadow-sm">
           {tool.tag}
         </span>
@@ -27,14 +35,14 @@ const ToolsCart = ({ selectedProducts, setSelectedProducts, tool }) => {
             <h2 className="text-2xl font-semibold text-slate-900">
               {tool.name}
             </h2>
-            <p className="text-sm text-slate-500">
-              {tool.description}
-            </p>
+            <p className="text-sm text-slate-500">{tool.description}</p>
           </div>
         </div>
 
         <div className="flex items-end gap-2 mb-6">
-          <span className="text-4xl font-extrabold text-slate-900">${tool.price}</span>
+          <span className="text-4xl font-extrabold text-slate-900">
+            ${tool.price}
+          </span>
           <span className="text-sm text-slate-500">/{tool.period}</span>
         </div>
 
@@ -83,12 +91,17 @@ const ToolsCart = ({ selectedProducts, setSelectedProducts, tool }) => {
           </div>
         </div>
 
-        <button className="w-full rounded-2xl bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/10 transition hover:bg-violet-700" onClick={() => setSelectedProducts([...selectedProducts, tool])}>
-          Buy Now
+        <button
+          className="w-full rounded-2xl bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/10 transition hover:bg-violet-700"
+          onClick={handleClick}
+        >
+          {selectedProducts.some((product) => product.id === tool.id)
+            ? "Added to Cart"
+            : "Buy Now"}
         </button>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ToolsCart;
