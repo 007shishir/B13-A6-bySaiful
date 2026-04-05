@@ -10,6 +10,7 @@ import PackagePrice from './Componants/Main/PackagePrice'
 import ReadytoJoin from './Componants/Main/ReadytoJoin'
 import Footer from './Componants/footer/Footer'
 import EmptyCart from './Componants/Main/EmptyCart'
+import SelectedTools from './Componants/PlayerUI/SelectedTools'
 
 
   const   fetchToolsData = async () => {
@@ -20,6 +21,7 @@ import EmptyCart from './Componants/Main/EmptyCart'
 function App() {
 
   const [productBtn, setProductBtn] = React.useState(true);
+  const [selectedProducts, setSelectedProducts] = React.useState([]);
 
   const toolsPromise = fetchToolsData();
 
@@ -28,12 +30,12 @@ function App() {
       <Navbar>  </Navbar>
       <Hero/>
       <UserN/>
-      <ToolsHeader productBtn={productBtn} setProductBtn={setProductBtn}/>
+      <ToolsHeader productBtn={productBtn} setProductBtn={setProductBtn} selectedProducts={selectedProducts}/>
 
       <Suspense fallback={<div className="flex justify-center items-center"><span className="loading loading-ring loading-lg"></span></div>}>
         
         {
-          productBtn ? <ToolsData toolsPromise={toolsPromise}/> : <EmptyCart/>
+          productBtn ? <ToolsData selectedProducts={selectedProducts} setSelectedProducts={setSelectedProducts} toolsPromise={toolsPromise}/> : selectedProducts.length > 0 ? <SelectedTools selectedProducts={selectedProducts} setSelectedProducts={setSelectedProducts} /> : <EmptyCart/>
         }
       </Suspense>
 

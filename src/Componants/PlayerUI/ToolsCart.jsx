@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToolsCart = ({ tool }) => {
+const ToolsCart = ({ selectedProducts, setSelectedProducts, tool }) => {
     return (
         <div>
                     <div className="relative rounded-lg bg-slate-50 p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
@@ -83,7 +83,7 @@ const ToolsCart = ({ tool }) => {
           </div>
         </div>
 
-        <button className="w-full rounded-2xl bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/10 transition hover:bg-violet-700">
+        <button className="w-full rounded-2xl bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/10 transition hover:bg-violet-700" onClick={() => setSelectedProducts([...selectedProducts, tool])}>
           Buy Now
         </button>
       </div>
