@@ -7,6 +7,8 @@ import GetStarted from './Componants/Main/GetStarted'
 import UserN from './Componants/Main/UserN'
 import ToolsData from './Componants/PlayerUI/ToolsData'
 import PackagePrice from './Componants/Main/PackagePrice'
+import ReadytoJoin from './Componants/Main/ReadytoJoin'
+import Footer from './Componants/footer/Footer'
 
 
   const   fetchToolsData = async () => {
@@ -24,12 +26,15 @@ function App() {
       <Hero/>
       <UserN/>
       <ToolsHeader/>
-      <Suspense fallback={<div>Loading...</div>}>
+
+      <Suspense fallback={<div className="flex justify-center items-center"><span className="loading loading-ring loading-lg"></span></div>}>
         <ToolsData toolsPromise={toolsPromise}/>
       </Suspense>
 
       <GetStarted/>
       <PackagePrice/>
+      <ReadytoJoin/>
+      <Footer/>
     </>
   )
 }
