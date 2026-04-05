@@ -1,4 +1,5 @@
 import React from "react";
+import banner from '../../assets/banner.png';
 
 const Hero = () => {
   return (
@@ -34,7 +35,7 @@ const Hero = () => {
 
         <div className="w-[400px]  max-w-md lg:max-w-xl">
           <img
-            src="../src/assets/banner.png"
+            src={banner}
             alt="AI workflow illustration"
             className="h-full w-full rounded-2xl border border-slate-200 object-cover shadow-xl"
           />
