@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import React, { Suspense } from 'react'
 import './App.css'
 import Hero from './Componants/header/Hero'
 import Navbar from './Componants/header/Navbar'
@@ -9,6 +9,7 @@ import ToolsData from './Componants/PlayerUI/ToolsData'
 import PackagePrice from './Componants/Main/PackagePrice'
 import ReadytoJoin from './Componants/Main/ReadytoJoin'
 import Footer from './Componants/footer/Footer'
+import EmptyCart from './Componants/Main/EmptyCart'
 
 
   const   fetchToolsData = async () => {
@@ -18,6 +19,8 @@ import Footer from './Componants/footer/Footer'
 
 function App() {
 
+  const [productBtn, setProductBtn] = React.useState(true);
+
   const toolsPromise = fetchToolsData();
 
   return (
@@ -25,10 +28,13 @@ function App() {
       <Navbar>  </Navbar>
       <Hero/>
       <UserN/>
-      <ToolsHeader/>
+      <ToolsHeader productBtn={productBtn} setProductBtn={setProductBtn}/>
 
       <Suspense fallback={<div className="flex justify-center items-center"><span className="loading loading-ring loading-lg"></span></div>}>
-        <ToolsData toolsPromise={toolsPromise}/>
+        
+        {
+          productBtn ? <ToolsData toolsPromise={toolsPromise}/> : <EmptyCart/>
+        }
       </Suspense>
 
       <GetStarted/>

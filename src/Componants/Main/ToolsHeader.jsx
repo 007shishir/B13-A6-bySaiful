@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToolsHeader = () => {
+const ToolsHeader = ({ productBtn, setProductBtn }) => {
   return (
     <section className="bg-white py-12 sm:py-16">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
@@ -13,11 +13,11 @@ const ToolsHeader = () => {
         </p>
 
         <div className="mt-6 flex items-center gap-3">
-          <button className="rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">
+          <button className={`rounded-full ${productBtn ? 'bg-indigo-600 text-white' : 'bg-slate-200 text-black'} px-6 py-2.5 text-sm font-semibold  shadow-sm hover:bg-indigo-700`} onClick={() => setProductBtn(true)}>
             Products
           </button>
-          <button className="rounded-full border border-slate-200 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50">
-            Cart (2)
+          <button className={`rounded-full border ${productBtn ? 'border-indigo-600 bg-white text-slate-700' : 'bg-indigo-600 text-white'} px-6 py-2.5 text-sm font-semibold hover:bg-slate-50`} onClick={() => setProductBtn(false)}>
+            Cart (0)
           </button>
         </div>
       </div>
